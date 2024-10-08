@@ -1,0 +1,32 @@
+const urls: Record<string, string> = {
+  signUp: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/main_menu/sign_up",
+  logIn: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/main_menu/log_in",
+  forgetPassword: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/main_menu/forget_password",
+  logOut: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/log_out",
+  changePassword: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/change_password",
+  pingTTL: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/ping_ttl",
+  confirmTransationalEmails: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/confirm_transational_emails",
+  updateUserData: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/update_user_data",
+  returnipCountryCode: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/main_menu/return_ip_countrycode",
+  saveJson: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/save_exercise_json",
+  create_class: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/create_exercise",
+  showConnections: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_connections",
+  showExercises: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_exercises",
+  shoStudents: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_students",
+  showInstitutes: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_institutes",
+  showInstituteMembers: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_institute_members",
+  shoLocations: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_location",
+  showTeachers: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_teachers",
+  showTeacherExercises: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_teacher_exercises",
+  deleteExercise: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/delete_exercise",
+  sendPreregistEmailAll: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/send_preregistration_email_all",
+  sendPreregistEmailOne: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/send_preregistration_email_one",
+  sendNewUsers: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/add_new_users",
+  removeUser: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/remove_user",
+  readJsonFile: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/read_json_file",
+  guestSignup: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/main_menu/Guest_joinned",
+  updateGuest: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/update_guest_data",
+  getGuests: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_guests"
+};
+
+export default urls;
