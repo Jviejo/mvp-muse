@@ -11,6 +11,7 @@ const Header = () => {
   const { isLoggedIn, setIsLoggedIn } = useAuth();
   const logout = () => {
     setIsLoggedIn(false);
+    localStorage.removeItem("token");
     router.push("/");
   };
   
