@@ -1,32 +1,40 @@
-const urls: Record<string, string> = {
-  signUp: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/main_menu/sign_up",
-  logIn: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/main_menu/log_in",
-  forgetPassword: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/main_menu/forget_password",
-  logOut: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/log_out",
-  changePassword: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/change_password",
-  pingTTL: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/ping_ttl",
-  confirmTransationalEmails: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/confirm_transational_emails",
-  updateUserData: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/update_user_data",
-  returnipCountryCode: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/main_menu/return_ip_countrycode",
-  saveJson: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/save_exercise_json",
-  create_class: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/create_exercise",
-  showConnections: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_connections",
-  showExercises: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_exercises",
-  shoStudents: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_students",
-  showInstitutes: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_institutes",
-  showInstituteMembers: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_institute_members",
-  shoLocations: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_location",
-  showTeachers: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_teachers",
-  showTeacherExercises: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_teacher_exercises",
-  deleteExercise: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/delete_exercise",
-  sendPreregistEmailAll: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/send_preregistration_email_all",
-  sendPreregistEmailOne: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/send_preregistration_email_one",
-  sendNewUsers: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/add_new_users",
-  removeUser: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/remove_user",
-  readJsonFile: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/read_json_file",
-  guestSignup: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/main_menu/Guest_joinned",
-  updateGuest: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/update_guest_data",
-  getGuests: "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0/lobby/show_guests"
+
+const urlBase = "https://8rwd6lr689.execute-api.us-east-1.amazonaws.com";
+const version = "Version_0";
+
+const paths: Record<string, string> = {
+  signUp: "main_menu/sign_up",
+  logIn: "main_menu/log_in",
+  forgetPassword: "main_menu/forget_password",
+  logOut: "lobby/log_out",
+  changePassword: "lobby/change_password",
+  pingTTL: "lobby/ping_ttl",
+  confirmTransationalEmails: "lobby/confirm_transational_emails",
+  updateUserData: "lobby/update_user_data",
+  returnipCountryCode: "main_menu/return_ip_countrycode",
+  saveJson: "lobby/save_exercise_json",
+  create_class: "lobby/create_exercise",
+  showConnections: "lobby/show_connections",
+  showExercises: "lobby/show_exercises",
+  shoStudents: "lobby/show_students",
+  showInstitutes: "lobby/show_institutes",
+  showInstituteMembers: "lobby/show_institute_members",
+  shoLocations: "lobby/show_location",
+  showTeachers: "lobby/show_teachers",
+  showTeacherExercises: "lobby/show_teacher_exercises",
+  deleteExercise: "lobby/delete_exercise",
+  sendPreregistEmailAll: "lobby/send_preregistration_email_all",
+  sendPreregistEmailOne: "lobby/send_preregistration_email_one",
+  sendNewUsers: "lobby/add_new_users",
+  removeUser: "lobby/remove_user",
+  readJsonFile: "lobby/read_json_file",
+  guestSignup: "main_menu/Guest_joinned",
+  updateGuest: "lobby/update_guest_data",
+  getGuests: "lobby/show_guests"
 };
+
+const urls: Record<string, string> = Object.fromEntries(
+  Object.entries(paths).map(([key, path]) => [key, `${urlBase}/${version}/${path}`])
+);
 
 export default urls;
