@@ -8,8 +8,8 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState('login');
   return (
       <div className="flex justify-around  p-5">
-        <div className="w-1/4 flex flex-col items-center">
-          <Image src="/logo.png" alt="logo" width={100} height={100} />
+        <div className="w-1/4 flex flex-col justify-center items-center">
+          <Image src="/logo.png" alt="logo" width={300} height={300} />
           <h1 className="text-2xl font-bold">Welcome to our website</h1>
         </div>
          <div className="w-full max-w-md bg-white rounded-lg shadow-md overflow-hidden">
