@@ -1,0 +1,275 @@
+
+@baseUrl = https://8rwd6lr689.execute-api.us-east-1.amazonaws.com/Version_0
+@apiKey = your-api-key
+@accessKey = your-access-key
+
+### Sign Up
+POST {{baseUrl}}/main_menu/sign_up
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "email": "newuser@example.com",
+  "password": "new-password",
+  "username": "newuser",
+  "ip": "192.168.1.1",
+  "countrycode": "US",
+  "Platform": "Web",
+  "transational_email": true,
+  "marketing_email": false
+}
+
+### Log In
+POST {{baseUrl}}/main_menu/log_in
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "email": "user@example.com",
+  "password": "user-password",
+  "ip": "192.168.1.1",
+  "countrycode": "US",
+  "Platform": "Web"
+}
+
+### Forget Password
+POST {{baseUrl}}/main_menu/forget_password
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "email": "user@example.com"
+}
+
+### Log Out
+POST {{baseUrl}}/lobby/log_out
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "email": "user@example.com"
+}
+
+### Change Password
+POST {{baseUrl}}/lobby/change_password
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "Email": "user@example.com",
+  "actualPassword": "old-password",
+  "newPassword": "new-password"
+}
+
+### Ping TTL
+POST {{baseUrl}}/lobby/ping_ttl
+Content-Type: application/json
+
+{
+  "IsAGuest": false,
+  "GuestID": null,
+  "Email": "user@example.com"
+}
+
+### Confirm Transactional Emails
+POST {{baseUrl}}/lobby/confirm_transational_emails
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "email": "user@example.com"
+}
+
+### Update User Data
+POST {{baseUrl}}/lobby/update_user_data
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "Email": "user@example.com",
+  "Marketing_email": true
+}
+
+### Return IP Country Code
+POST {{baseUrl}}/main_menu/return_ip_countrycode
+Content-Type: application/json
+
+{
+  "Ip": "192.168.1.1"
+}
+
+### Save Exercise JSON
+POST {{baseUrl}}/lobby/save_exercise_json
+Content-Type: application/json
+
+{
+  "Email": "user@example.com",
+  "json_to_exercise": "{\"exercise_data\": \"...\"}",
+  "json_to_exercise_name": "exercise1",
+  "platform_type": "Web",
+  "exercise_number": 1,
+  "TrackID": "track-123",
+  "accuracy_result": 85,
+  "Success": true,
+  "teacher": "teacher@example.com"
+}
+
+### Create Exercise
+POST {{baseUrl}}/lobby/create_exercise
+Content-Type: application/json
+
+{
+  "Email": "user@example.com",
+  "trackID": "track-123",
+  "originalBPM": 120,
+  "bpmr": 100,
+  "time_in_percentage": 75,
+  "times_completed": 3
+}
+
+### Show User Connections
+POST {{baseUrl}}/lobby/show_connections
+Content-Type: application/json
+
+{
+  "email": "user@example.com"
+}
+
+### Show User Exercises
+POST {{baseUrl}}/lobby/show_exercises
+Content-Type: application/json
+
+{
+  "Email": "user@example.com",
+  "Exercise": "exercise1"
+}
+
+### Show Students
+POST {{baseUrl}}/lobby/show_students
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "email": "teacher@example.com"
+}
+
+### Show Institutes
+POST {{baseUrl}}/lobby/show_institutes
+Content-Type: application/json
+
+{
+  "table": "institutes"
+}
+
+### Show Institute Members
+POST {{baseUrl}}/lobby/show_institute_members
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}"
+}
+
+### Show Location
+POST {{baseUrl}}/lobby/show_location
+Content-Type: application/json
+
+{
+}
+
+### Show Teacher Exercises
+POST {{baseUrl}}/lobby/show_teacher_exercises
+Content-Type: application/json
+
+{
+  "Email": "teacher@example.com"
+}
+
+### Delete Exercise
+POST {{baseUrl}}/lobby/delete_exercise
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "Email": "teacher@example.com"
+}
+
+### Send Preregistration Email (All)
+POST {{baseUrl}}/lobby/send_preregistration_email_all
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "Email": "admin@example.com",
+  "accesscode": "access-code-123"
+}
+
+### Send Preregistration Email (One)
+POST {{baseUrl}}/lobby/send_preregistration_email_one
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "Email": "newuser@example.com"
+}
+
+### Add New Users
+POST {{baseUrl}}/lobby/add_new_users
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "Emails": [
+    ["email1@example.com", 1],
+    ["email2@example.com", 2]
+  ]
+}
+
+### Remove User
+POST {{baseUrl}}/lobby/remove_user
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "Email": "user@example.com"
+}
+
+### Read JSON File
+POST {{baseUrl}}/lobby/read_json_file
+Content-Type: application/json
+
+{
+  "Ip": "192.168.1.1",
+  "Email": "user@example.com",
+  "Platform_type": "Web",
+  "Json_to_exercise_name": "exercise1",
+  "Exercise_number": 1,
+  "Json_to_gmae_status_name": "status1",
+  "Teacher": "teacher@example.com"
+}
+
+### Guest Signup
+POST {{baseUrl}}/main_menu/Guest_joinned
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "email": "guest@example.com"
+}
+
+### Update Guest Data
+POST {{baseUrl}}/lobby/update_guest_data
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}",
+  "Email": "guest@example.com",
+  "NewData": "..."
+}
+
+### Show Guests
+POST {{baseUrl}}/lobby/show_guests
+Content-Type: application/json
+
+{
+  "accesskey": "{{accessKey}}"
+}
