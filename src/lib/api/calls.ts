@@ -64,7 +64,7 @@ export async function login(accessKey: string, email: string, password: string, 
       const token = jwt.sign(datosLogin, secret, { expiresIn: '1h' });
       datosLogin.token = token;
       
-      return JSON.parse(datosLogin);
+      return JSON.stringify(datosLogin);
 
     } catch (error) {
       console.error(`Error in login:`, error);
